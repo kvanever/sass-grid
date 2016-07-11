@@ -4,28 +4,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 .wrapper {
   width: 100%;
   margin: 0 auto; }
 
 section#colors,
-section#tints,
-section#generated {
+section#typo {
   display: flex;
-  flex-direction: column; }
-
-h1 {
+  flex-direction: column;
   margin-left: 1rem; }
-  header h1 {
-    font-weight: lighter;
-    font-size: 4em;
-    border-bottom: 1px solid lightgray;
-    margin-bottom: 1rem; }
 
-#tones p, #generated p {
-  margin: 1rem; }
+header h1 {
+  font-weight: lighter;
+  font-size: 4em;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 1rem; }
 
 .color-palette, .tint-palette, .tints, .generated-palette {
   display: flex; }
@@ -36,6 +31,10 @@ h1 {
 figure.color-description {
   flex: 1;
   margin: 1em; }
+  figure.color-description:first-child {
+    margin-left: 0; }
+  figure.color-description:last-child {
+    margin-right: 0; }
 
 .color-window {
   width: 100%;
@@ -55,8 +54,57 @@ figure.color-description {
   .color-description p span.color-value {
     text-align: right; }
 
+.fonts h1 {
+  font-size: 2.5em;
+  margin: 0.5em 0; }
+.fonts p {
+  letter-spacing: 0.3em; }
+
+#bree-serif h1, #bree-serif p {
+  font-family: "Bree Serif", serif; }
+
+.heading {
+  display: flex;
+  flex-basis: 10%;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1em 0; }
+  .heading h1 {
+    color: #FF7976;
+    font-family: "Bree Serif", serif;
+    font-size: 3em;
+    margin: 0; }
+  .heading h2 {
+    color: black;
+    font-size: 2.5em; }
+  .heading h3 {
+    color: lightgray;
+    font-family: "Bree Serif", serif;
+    font-size: 2em; }
+  .heading h4 {
+    color: #c79670;
+    font-family: "Bree Serif", serif;
+    font-size: 2em; }
+  .heading h5 {
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold; }
+  .heading h6 {
+    color: black;
+    font-size: 1em;
+    text-transform: uppercase; }
+
+.heading-icon {
+  flex: 1; }
+
+.heading-text {
+  flex: 9; }
+
 .purple {
   background-color: #D0609D; }
+  .fonts .purple {
+    color: #D0609D;
+    background-color: white; }
 
 .purple.lighter {
   background-color: #dc87b5; }
@@ -66,6 +114,9 @@ figure.color-description {
 
 .pink {
   background-color: #FF7976; }
+  .fonts .pink {
+    color: #FF7976;
+    background-color: white; }
 
 .pink.lighter {
   background-color: #ffaba9; }
@@ -78,6 +129,9 @@ figure.color-description {
 
 .green {
   background-color: #5ECB65; }
+  .fonts .green {
+    color: #5ECB65;
+    background-color: white; }
 
 .green.lighter {
   background-color: #85d78a; }
@@ -90,6 +144,9 @@ figure.color-description {
 
 .yellow {
   background-color: #C2EE6E; }
+  .fonts .yellow {
+    color: #C2EE6E;
+    background-color: white; }
 
 .yellow.lighter {
   background-color: #d5f39c; }
@@ -102,6 +159,9 @@ figure.color-description {
 
 .purple {
   background-color: #D0609D; }
+  .fonts .purple {
+    color: #D0609D;
+    background-color: white; }
 
 .purple.lighter {
   background-color: #dc87b5; }
@@ -114,6 +174,9 @@ figure.color-description {
 
 .pink {
   background-color: #FF7976; }
+  .fonts .pink {
+    color: #FF7976;
+    background-color: white; }
 
 .pink.lighter {
   background-color: #ffaba9; }
@@ -123,6 +186,9 @@ figure.color-description {
 
 .green {
   background-color: #5ECB65; }
+  .fonts .green {
+    color: #5ECB65;
+    background-color: white; }
 
 .green.lighter {
   background-color: #85d78a; }
@@ -135,6 +201,9 @@ figure.color-description {
 
 .yellow {
   background-color: #C2EE6E; }
+  .fonts .yellow {
+    color: #C2EE6E;
+    background-color: white; }
 
 .yellow.lighter {
   background-color: #d5f39c; }
@@ -147,6 +216,9 @@ figure.color-description {
 
 .purple {
   background-color: #D0609D; }
+  .fonts .purple {
+    color: #D0609D;
+    background-color: white; }
 
 .purple.lighter {
   background-color: #dc87b5; }
@@ -159,6 +231,9 @@ figure.color-description {
 
 .pink {
   background-color: #FF7976; }
+  .fonts .pink {
+    color: #FF7976;
+    background-color: white; }
 
 .pink.lighter {
   background-color: #ffaba9; }
@@ -171,6 +246,9 @@ figure.color-description {
 
 .green {
   background-color: #5ECB65; }
+  .fonts .green {
+    color: #5ECB65;
+    background-color: white; }
 
 .green.lighter {
   background-color: #85d78a; }
@@ -180,6 +258,9 @@ figure.color-description {
 
 .yellow {
   background-color: #C2EE6E; }
+  .fonts .yellow {
+    color: #C2EE6E;
+    background-color: white; }
 
 .yellow.lighter {
   background-color: #d5f39c; }
@@ -192,6 +273,9 @@ figure.color-description {
 
 .purple {
   background-color: #D0609D; }
+  .fonts .purple {
+    color: #D0609D;
+    background-color: white; }
 
 .purple.lighter {
   background-color: #dc87b5; }
@@ -204,6 +288,9 @@ figure.color-description {
 
 .pink {
   background-color: #FF7976; }
+  .fonts .pink {
+    color: #FF7976;
+    background-color: white; }
 
 .pink.lighter {
   background-color: #ffaba9; }
@@ -216,6 +303,9 @@ figure.color-description {
 
 .green {
   background-color: #5ECB65; }
+  .fonts .green {
+    color: #5ECB65;
+    background-color: white; }
 
 .green.lighter {
   background-color: #85d78a; }
@@ -228,6 +318,9 @@ figure.color-description {
 
 .yellow {
   background-color: #C2EE6E; }
+  .fonts .yellow {
+    color: #C2EE6E;
+    background-color: white; }
 
 .yellow.lighter {
   background-color: #d5f39c; }

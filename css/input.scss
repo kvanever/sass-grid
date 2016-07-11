@@ -18,25 +18,20 @@
 }
 
 section#colors,
-section#tints,
-section#generated{
+section#typo
+ {
   display: flex;
   flex-direction: column;
-
+  margin-left: 1rem;
 }
 
 h1 {
-  margin-left: 1rem;
   header &{
     font-weight: lighter;
     font-size: 4em;
     border-bottom: 1px solid lightgray;
     margin-bottom: 1rem;
   }
-}
-
-#tones p, #generated p {
-  margin: 1rem;
 }
 
 .color-palette, .tint-palette, .tints, .generated-palette {
@@ -50,6 +45,12 @@ h1 {
 figure.color-description {
   flex: 1;
   margin: 1em;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .color-window {
@@ -77,10 +78,78 @@ figure.color-description {
   }
 }
 
+.fonts {
+    h1 {
+      font-size: 2.5em;
+      margin: 0.5em 0;
+    }
+    p {
+      letter-spacing: 0.3em;
+    }
+}
+
+#bree-serif {
+    h1, p {
+    font-family: $accent-font;
+  }
+}
+
+.heading {
+  h1 {
+  color: $pink;
+  font-family: $accent-font;
+  font-size: 3em;
+  margin: 0;
+  }
+  h2 {
+    color: black;
+    font-size: 2.5em;
+  }
+  h3 {
+  color: lightgray;
+  font-family: $accent-font;
+  font-size: 2em;
+  }
+  h4 {
+  color: mix($pink, $green, 65%);
+  font-family: $accent-font;
+  font-size: 2em;
+  }
+  h5 {
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+  }
+  h6 {
+  color: black;
+  font-size: 1em;
+  text-transform: uppercase;
+  }
+  display: flex;
+  flex-basis: 10%;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1em 0;
+}
+
+.heading-icon {
+  flex: 1;
+
+}
+
+.heading-text {
+  flex: 9;
+}
+
+
 @each $primary-color, $primary-hex-value in (purple, $purple), (pink, $pink), (green, $green), (yellow, $yellow) {
   @each $secondary-color, $secondary-hex-value in (purple, $purple), (pink, $pink), (green, $green), (yellow, $yellow) {
     .#{$secondary-color} {
       background-color: $secondary-hex-value;
+      .fonts & {
+        color: $secondary-hex-value;
+        background-color: white;
+      }
     }
     .#{$secondary-color}.lighter {
       background-color: lighten($secondary-hex-value, 10%);
@@ -93,5 +162,6 @@ figure.color-description {
         background-color: mix($primary-hex-value, $secondary-hex-value, 65%);
       }
     }
+
   }
 }
