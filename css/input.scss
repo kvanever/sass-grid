@@ -8,10 +8,36 @@
     margin: 0;
     padding: 0;
     @include border-box;
+    font-family: $font;
     }
 
 //Styles
 .wrapper {
   width: 100%;
   margin: 0 auto;
+}
+
+section#colors {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-palette {
+  display: flex;
+
+}
+
+figure.color-description {
+  flex: 1;
+}
+
+.color-window {
+  width: 70%;
+  padding-bottom: 30%;
+}
+
+@each $color, $hex-value in (purple, $purple), (pink, $pink), (green, $green), (yellow, $yellow) {
+  .#{$color} {
+    background-color: $hex-value;
+  }
 }

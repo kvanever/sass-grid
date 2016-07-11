@@ -3,10 +3,37 @@
 *:before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: sans-serif; }
 
 .wrapper {
   width: 100%;
   margin: 0 auto; }
+
+section#colors {
+  display: flex;
+  flex-direction: column; }
+
+.color-palette {
+  display: flex; }
+
+figure.color-description {
+  flex: 1; }
+
+.color-window {
+  width: 70%;
+  padding-bottom: 30%; }
+
+.purple {
+  background-color: #D0609D; }
+
+.pink {
+  background-color: #FF7976; }
+
+.green {
+  background-color: #5ECB65; }
+
+.yellow {
+  background-color: #C2EE6E; }
 
 /*# sourceMappingURL=styles.css.map */
