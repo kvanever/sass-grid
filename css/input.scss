@@ -22,18 +22,45 @@ section#colors {
   flex-direction: column;
 }
 
+h1 {
+  margin-left: 1rem;
+  header &{
+    font-weight: lighter;
+    font-size: 4em;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 1rem;
+  }
+}
+
 .color-palette {
   display: flex;
-
 }
 
 figure.color-description {
   flex: 1;
+  margin: 1em;
 }
 
 .color-window {
-  width: 70%;
-  padding-bottom: 30%;
+  width: 100%;
+  padding-bottom: 50%;
+  margin-bottom: 0.5em;
+}
+
+.color-description {
+  p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    margin-bottom: 0.25em;
+    span.color-property {
+      text-align: left;
+      font-weight: bold;
+    }
+    span.color-value {
+      text-align: right;
+    }
+  }
 }
 
 @each $color, $hex-value in (purple, $purple), (pink, $pink), (green, $green), (yellow, $yellow) {
