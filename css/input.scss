@@ -18,9 +18,11 @@
 }
 
 section#colors,
-section#tints {
+section#tints,
+section#generated{
   display: flex;
   flex-direction: column;
+
 }
 
 h1 {
@@ -33,11 +35,11 @@ h1 {
   }
 }
 
-#tones p {
+#tones p, #generated p {
   margin: 1rem;
 }
 
-.color-palette, .tint-palette, .tints {
+.color-palette, .tint-palette, .tints, .generated-palette {
   display: flex;
 }
 
@@ -54,6 +56,9 @@ figure.color-description {
   width: 100%;
   padding-bottom: 50%;
   margin-bottom: 0.5em;
+    &.small {
+      padding-bottom: 25%;
+    }
 }
 
 .color-description {
@@ -72,14 +77,21 @@ figure.color-description {
   }
 }
 
-@each $color, $hex-value in (purple, $purple), (pink, $pink), (green, $green), (yellow, $yellow) {
-  .#{$color} {
-    background-color: $hex-value;
-  }
-  .#{$color}.lighter {
-    background-color: lighten($hex-value, 10%);
-  }
-  .#{$color}.darker {
-    background-color: darken($hex-value, 10%);
+@each $primary-color, $primary-hex-value in (purple, $purple), (pink, $pink), (green, $green), (yellow, $yellow) {
+  @each $secondary-color, $secondary-hex-value in (purple, $purple), (pink, $pink), (green, $green), (yellow, $yellow) {
+    .#{$secondary-color} {
+      background-color: $secondary-hex-value;
+    }
+    .#{$secondary-color}.lighter {
+      background-color: lighten($secondary-hex-value, 10%);
+    }
+    .#{$secondary-color}.darker {
+      background-color: darken($secondary-hex-value, 10%);
+    }
+    @if $primary-color != $secondary-color {
+      .#{$primary-color}.#{$secondary-color} {
+        background-color: mix($primary-hex-value, $secondary-hex-value, 65%);
+      }
+    }
   }
 }
