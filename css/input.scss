@@ -33,6 +33,10 @@ h1 {
   }
 }
 
+#tones p {
+  margin: 1rem;
+}
+
 .color-palette, .tint-palette, .tints {
   display: flex;
 }
@@ -71,5 +75,11 @@ figure.color-description {
 @each $color, $hex-value in (purple, $purple), (pink, $pink), (green, $green), (yellow, $yellow) {
   .#{$color} {
     background-color: $hex-value;
+  }
+  .#{$color}.lighter {
+    background-color: lighten($hex-value, 10%);
+  }
+  .#{$color}.darker {
+    background-color: darken($hex-value, 10%);
   }
 }

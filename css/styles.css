@@ -23,6 +23,9 @@ h1 {
     border-bottom: 1px solid lightgray;
     margin-bottom: 1rem; }
 
+#tones p {
+  margin: 1rem; }
+
 .color-palette, .tint-palette, .tints {
   display: flex; }
 
@@ -52,13 +55,37 @@ figure.color-description {
 .purple {
   background-color: #D0609D; }
 
+.purple.lighter {
+  background-color: #dc87b5; }
+
+.purple.darker {
+  background-color: #c33a85; }
+
 .pink {
   background-color: #FF7976; }
+
+.pink.lighter {
+  background-color: #ffaba9; }
+
+.pink.darker {
+  background-color: #ff4743; }
 
 .green {
   background-color: #5ECB65; }
 
+.green.lighter {
+  background-color: #85d78a; }
+
+.green.darker {
+  background-color: #3cba44; }
+
 .yellow {
   background-color: #C2EE6E; }
+
+.yellow.lighter {
+  background-color: #d5f39c; }
+
+.yellow.darker {
+  background-color: #afe940; }
 
 /*# sourceMappingURL=styles.css.map */
